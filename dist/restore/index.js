@@ -3265,6 +3265,7 @@ function downloadCache(archiveLocation, archivePath, options) {
             archiveUrl.hostname.endsWith('.blob.core.windows.net')) {
             // Use Azure storage SDK to download caches hosted on Azure to improve speed and reliability.
             yield downloadUtils_1.downloadCacheStorageSDK(archiveLocation, archivePath, downloadOptions);
+            core.debug(`HERE`);
         }
         else {
             // Otherwise, download using the Actions http-client.
