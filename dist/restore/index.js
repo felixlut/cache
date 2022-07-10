@@ -46843,6 +46843,7 @@ function restoreCache(paths, primaryKey, restoreKeys, options) {
         restoreKeys = restoreKeys || [];
         const keys = [primaryKey, ...restoreKeys];
         core.debug('Resolved Keys:');
+        core.debug('YELLOW');
         core.debug(JSON.stringify(keys));
         if (keys.length > 10) {
             throw new ValidationError(`Key Validation Error: Keys are limited to a maximum of 10.`);
