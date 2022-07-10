@@ -3262,7 +3262,7 @@ function downloadCache(archiveLocation, archivePath, options) {
         const archiveUrl = new url_1.URL(archiveLocation);
         const downloadOptions = options_1.getDownloadOptions(options);
         core.debug(`HERE`);
-        core.debug(archiveUrl);
+        core.debug(archiveUrl.hostname);
         core.debug(downloadOptions);
         if (downloadOptions.useAzureSdk &&
             archiveUrl.hostname.endsWith('.blob.core.windows.net')) {
