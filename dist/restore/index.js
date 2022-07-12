@@ -3261,9 +3261,13 @@ function downloadCache(archiveLocation, archivePath, options) {
     return __awaiter(this, void 0, void 0, function* () {
         const archiveUrl = new url_1.URL(archiveLocation);
         const downloadOptions = options_1.getDownloadOptions(options);
-        core.debug(`HERE`);
         core.debug(archiveUrl.hostname);
         core.debug(downloadOptions);
+        console.log(archiveLocation)
+        console.log(archivePath)
+        console.log(options)
+        console.log(archiveUrl)
+        console.log(downloadOptions)
         if (downloadOptions.useAzureSdk &&
             archiveUrl.hostname.endsWith('.blob.core.windows.net')) {
             // Use Azure storage SDK to download caches hosted on Azure to improve speed and reliability.
