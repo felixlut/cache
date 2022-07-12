@@ -34,7 +34,7 @@ jobs:
       id: npm-cache-dir
       run: |
         echo "::set-output name=dir::$(npm config get cache)"
-    - uses: felixlut/cache@bdfb8bd06ca6b668a4102bc36c15084923e8f039
+    - uses: felixlut/cache@main
       id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
       with:
         path: ${{ steps.npm-cache-dir.outputs.dir }}
